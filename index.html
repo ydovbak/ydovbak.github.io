@@ -32,6 +32,7 @@
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="images/woman_logo.png">
+  <script src="js/dob.js"></script>
 
 </head>
 
@@ -70,10 +71,10 @@
         <p>student, developer, gamer</p>
 
         <ul class="list-unstyled list-social">
-          <li><a href="https://www.facebook.com/julia.dovbak" target="_blank"><i class="ion-social-facebook"></i></a>
-          </li>
           <li><a href="https://twitter.com/JuliaDovbak" target="_blank"><i class="ion-social-twitter"></i></a></li>
           <li><a href="https://www.instagram.com/cuddly.ewe/" target="_blank"><i class="ion-social-instagram"></i></a>
+          </li>
+          <li><a href="https://github.com/ydovbak" target="_blank"><i class="ion-social-github"></i></a>
           </li>
         </ul>
       </div>
@@ -90,7 +91,7 @@
         <div class="col-lg-4 ">
           <div class="div-img-bg">
             <div class="about-img">
-              <img src="images/me1_edited.jpg" class="img-responsive" alt="me">
+              <img src="images/portfolio_myself_1.jpg" class="img-responsive" alt="me">
             </div>
           </div>
         </div>
@@ -98,13 +99,14 @@
         <div class="col-lg-7">
           <div class="about-descr">
 
-            <p class="p-heading">I'm a 23 year old first year student studying Software Design in AthloneIT. </p>
+            <p class="p-heading">I'm a <span id="age"></span> year old second year student studying Software Design in
+              AthloneIT. </p>
             <p class="separator">My passion is all about learning new subjects and technologies. Web and game
               development brought the most joy to my student life as by learning these subjects I understood that the
-              beauty of programming is the structure and I love it. Structuring everything makes the most difficult
+              beauty of programming is in it's structure and I love it. Structuring everything makes the most difficult
               problems easy to solve. </p>
-            <p class="separator"> When I am not programming you can find me experimenting with coffees. I am always
-              trying to improve my barista skills and show to everyone around what a real coffee should look like.</p>
+            <p class="separator"> I don't compare myself with anyone else except me. Everyday goal of my life is to
+              become better than I was the day before.</p>
           </div>
 
         </div>
@@ -141,23 +143,6 @@
           <i class="ion-ios-color-wand-outline"></i>
           <span><a href="subject-web-dev.html" target="_blank"> Web Design </a></span>
           <p class="separator">The aim of this module is to introduce students to a variety of web technologies</p>
-
-        </div>
-
-        <div class="services-block">
-
-          <i class="ion-ios-calculator-outline"></i>
-          <span><a href="subject-math.html" target="_blank">Maths</a></span>
-          <p class="separator">The purpose of this module is to give a grounding in the fundamentals of engineering
-            mathematics</p>
-
-        </div>
-
-        <div class="services-block">
-
-          <i class="ion-ios-photos-outline"></i>
-          <span><a href="subject-digital-media.html" target="_blank">Digital Media</a></span>
-          <p class="separator">This module is about exploring and creating multimedia </p>
 
         </div>
 
@@ -223,16 +208,7 @@
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-thumbnail all digital">
-              <div class="card">
-                <img class="card-img-top" src="images/portfolio/digital.jpg" alt="Card image" style="width:100%">
-                <div class="card-body">
-                  <h4 class="card-title">Gimp projects gallery</h4>
-                  <p class="card-text">Examples of images edited in GIMP</p>
-                  <a href="/project-gimp.html" class="btn btn-dark btn-rounded">See Project</a>
-                </div>
-              </div>
-            </div>
+
 
             <div class="col-lg-4 col-md-6 portfolio-thumbnail all digital">
               <div class="card">
@@ -241,17 +217,6 @@
                   <h4 class="card-title">Screencast Page</h4>
                   <p class="card-text"> Hosting a website on GitHub </p>
                   <a href="/project-video.html" class="btn btn-dark btn-rounded">See Project</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-thumbnail all digital">
-              <div class="card">
-                <img class="card-img-top" src="images/portfolio/audio.jpg" alt="Card image" style="width:100%">
-                <div class="card-body">
-                  <h4 class="card-title">Audio Page</h4>
-                  <p class="card-text"> A sound sample edited with Audacity </p>
-                  <a href="/project-sound.html" class="btn btn-dark btn-rounded">See Project</a>
                 </div>
               </div>
             </div>
@@ -308,16 +273,18 @@
                 <h2 class="mb-30" style="padding-top: 8px;">Resume</h2>
                 <ul class="contact-details">
                   <li><span>Use this link to download my CV</span></li>
-                  <li style="padding-bottom: 15px; padding-top: 10px;"> <a href="/downloads/CV.pdf" download="" class="btn btn-dark btn-rounded">Download</a></li>
+                  <li style="padding-bottom: 15px; padding-top: 10px;"> <a href="/downloads/CV.pdf" download=""
+                      class="btn btn-dark btn-rounded">Download</a></li>
                 </ul>
-               
+
               </div>
 
               <div class="contact-contact">
                 <h2 class="mb-30">Get in touch</h2>
                 <ul class="contact-details">
                   <li><span>Athlone, Ireland</span></li>
-                  <li><span> <a href="mailto:yulia.dovbak@gmail.com?Subject=Hello%20again" target="_top">yulia.dovbak@gmail.com</a> </span></li>
+                  <li><span> <a href="mailto:yulia.dovbak@gmail.com?Subject=Hello%20again"
+                        target="_top">yulia.dovbak@gmail.com</a> </span></li>
                 </ul>
               </div>
 
@@ -332,29 +299,19 @@
 
   <!-- start section footer -->
   <div id="footer" class="text-center">
-    <div class="container">
-      <div class="socials-media text-center">
+    <div class="socials-media text-center">
 
-        <ul class="list-unstyled">
-          <li><a href="https://www.facebook.com/julia.dovbak" target="_blank"><i class="ion-social-facebook"></i></a>
-          </li>
-          <li><a href="https://twitter.com/JuliaDovbak" target="_blank"><i class="ion-social-twitter"></i></a></li>
-          <li><a href="https://www.instagram.com/cuddly.ewe/" target="_blank"><i class="ion-social-instagram"></i></a>
-          </li>
-        </ul>
+      <ul class="list-unstyled">
+        <li><a href="https://twitter.com/JuliaDovbak" target="_blank"><i class="ion-social-twitter"></i></a></li>
+        <li><a href="https://www.instagram.com/cuddly.ewe/" target="_blank"><i class="ion-social-instagram"></i></a>
+        </li>
+        <li><a href="https://github.com/ydovbak" target="_blank"><i class="ion-social-github"></i></a>
+        </li>
+      </ul>
 
-      </div>
-
-      <p>Designed by Yuliia Dovbak</p>
-      <p class="credits"> <small> Material owned by other copyright holders is used here under the guidelines of the Fair Use provision.
-          Images were either created by me or are free to reuse for non-commercial purposes. You may use images and
-          links from this website provided full and clear credit is given to Yuliia Dovbak and My Portfolio. © </small>
-      </p>
-
-      <div class="credits">
-        2020
-      </div>
-
+    </div>
+    <div>
+      2020
     </div>
   </div>
   <!-- End section footer -->
