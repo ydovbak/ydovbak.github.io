@@ -1,0 +1,99 @@
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  background-color: #333;
+}
+
+body {
+  color: #fff;
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+}
+
+.cover-container {
+  max-width: 42em;
+}
+
+
+/*
+ * Grid
+ */
+
+.input-grid {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgba(61, 56, 70, 0.212);
+  border: 1px solid  rgba(255, 255, 255, .5);
+}
+
+.buttons-numbers {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgba(86, 61, 124, .15);
+  border: 1px solid  rgba(255, 255, 255, .5);
+  cursor: pointer;
+}
+
+.buttons-signs {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgba(93, 50, 128, 0.555);
+  border: 1px solid  rgba(255, 255, 255, .5);
+  cursor: pointer;
+}
+
+.buttons-numbers:hover, .buttons-signs:hover {
+  background-color :rgba(97, 104, 160, 0.555);
+}
+
+.buttons-numbers:active, .buttons-signs:active {
+  background-color :rgba(35, 38, 59, 0.555);
+}
+
+/*
+ * Input field
+ */
+
+ .num-input {
+  background-color: transparent;
+  border: transparent;
+  width: 100%;
+  padding: 5px 5px;
+  margin: 5px 0;
+  color: #fff;
+  font: 2em sans-serif;;
+ }
+
+ 
+ .num-input:focus{
+   border:transparent;
+   outline: none;
+ }
+
+
+
+/*
+ *Calculator
+ */
+
+.calculator {
+  width: 80%;
+}
+
+.warning {
+  font-weight: bold;
+}
+
+
+
+/*
+ * Footer
+ */
+.foot {
+  color: rgba(255, 255, 255, .5);
+}

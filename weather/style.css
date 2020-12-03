@@ -1,0 +1,129 @@
+/*Font import*/
+@import url(//fonts.googleapis.com/css?family=Quicksand);
+
+/* Show it's not fixed to the top */
+body {
+  min-height: 75rem;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/*Navigation bar*/
+.color-main {
+  background-color:#14213d;
+}
+
+.brand-line {
+  border-bottom: 2px solid #FCA311;
+}
+
+.brand-btn {
+  background-color: #FCA311;
+}
+
+.brand-color {          
+  color: #14213dc5;
+}
+
+/*Autocomplete panel*/
+#autocomplete-panel {
+  background-color: white;
+  position: absolute;
+  display: none;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+}
+
+/*Styling Main Weather Card*/
+.weather-card {
+  border-radius: 5px;
+  border-left: 3px solid#14213d;
+}
+
+.weather-icon {
+  font-size:96px;
+  color: #E5E5E5;
+}
+
+
+/*Styling extended weather box*/
+.days-container .nav-item {
+  border-top: 1px solid transparent !important;
+}
+.days-container .nav-link {
+  border: 1px solid transparent !important;
+  border-top: 5px solid transparent !important;
+  border-bottom: 5px solid #14213db6 !important;
+}
+
+.days-container .nav-link:hover{
+  border-bottom: 5px solid #FCA311 !important;
+}
+
+.days-container .nav-link.active {
+  border-top: 5px solid #FCA311 !important;
+  border-bottom: 5px solid white !important;
+  border-right: 1px solid #ddd !important;
+  border-left: 1px solid #ddd !important;
+}
+
+.days-container .nav-item:first-child > .nav-link {
+  border-left: 1px solid white !important;
+}
+
+.days-container .nav-item:last-child > .nav-link {
+  border-right: 1px solid white !important;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: black;
+}
+
+/*3-hour forecast breakdown panel*/
+.temp-text {
+  font-weight: 900;
+}
+
+
+/*Map*/
+#mapid {
+  height: 350px;
+  width: 100%;
+}
+
+.icon-center {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+}
+
+/*Charts*/
+
+.btn-blue {
+  background-color: #14213dc5;
+}
+
+/*
+.days-container .tab-content {
+  border: 1px solid #eee;
+}
+
+.days-container .nav-link {
+  transition: all 0.15s;
+}
+
+.days-container .nav-link.active {
+  background-color: red;
+}
+
+.days-container .nav-link:hover:not(.active) {
+  background-color: blue;
+}
+*/
