@@ -34,7 +34,7 @@ body {
   left: 0;
 }
 
-/*Styling Main Weather Card*/
+/*Styling Weather Cards*/
 .weather-card {
   border-radius: 5px;
   border-left: 3px solid#14213d;
@@ -109,21 +109,3 @@ a:hover {
 .btn-blue {
   background-color: #14213dc5;
 }
-
-/*
-.days-container .tab-content {
-  border: 1px solid #eee;
-}
-
-.days-container .nav-link {
-  transition: all 0.15s;
-}
-
-.days-container .nav-link.active {
-  background-color: red;
-}
-
-.days-container .nav-link:hover:not(.active) {
-  background-color: blue;
-}
-*/

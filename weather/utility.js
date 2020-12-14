@@ -25,16 +25,6 @@ const getNameOfDay = (day) =>  {
     return weekday[day];
 };
 
-const hideAutocompletePanel = () => {
-    const panelEl = $('#autocomplete-panel');
-    panelEl.style.display = "none";
-};
-
-const showAutocompletePanel = () => {
-    const panelEl = $('#autocomplete-panel');
-    panelEl.style.display = "block";
-};
-
 const placeAutocompletePanel = () => {
     const panelEl = $('#autocomplete-panel');
 
@@ -43,4 +33,14 @@ const placeAutocompletePanel = () => {
     panelEl.style.top = (coord.y + coord.height) + 'px';
     panelEl.style.left = coord.x + 'px';
     panelEl.style.width = coord.width + 'px';
+};
+
+const showAutocompletePanel = () => {
+    const panelEl = $('#autocomplete-panel');
+    panelEl.style.display = "block";
+};
+
+const hideAutocompletePanel = () => {
+    const panelEl = $('#autocomplete-panel');
+    panelEl.style.display = "none";
 };

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    /* Latte Art paralax image*/
+    .bgimg {
+        background-image: url("images/paralax-types.jpg");
+    }
+</style>
+
+<title>Coffee Art</title>
+
+<body>
+	<!-- Navbar (sit on top) -->
+	<div class="w3-top">
+		<div class="w3-bar w3-card w3-white" id="myNavbar">
+			<a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
+				href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+				<i class="fa fa-bars"></i>
+			</a>
+			<a href="index.html" class="w3-bar-item w3-button"><i class="fa fa-coffee"></i> HOME</a>
+			<a href="types.html" class="w3-bar-item w3-button w3-hide-small "><i class="fa fa-th"></i> TYPES</a>
+			<a href="health.html" class="w3-bar-item w3-button w3-hide-small "><i class="fa fa-heart"></i> HEALTH</a>
+			<a href="latte-art.html" class="w3-bar-item w3-button w3-hide-small "><i class="fa fa-pagelines"></i> LATTE
+				ART</a>
+			<a href="report.html" class="w3-bar-item w3-button w3-hide-small "><i class="fa fa-align-left"></i> REPORT</a>
+			<a href="contact.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+		</div>
+
+		<!-- Navbar on small screens -->
+		<div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+			<a href="types.html" class="w3-bar-item w3-button" ">TYPES</a>
+			<a href="health.html" class="w3-bar-item w3-button">HEALTH</a>
+			<a href="latte-art.html" class="w3-bar-item w3-button">LATTE ART</a>
+			<a href="report.html" class="w3-bar-item w3-button">REPORT</a>
+			<a href="contact.html" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+		</div>
+	</div>
+
+    <!-- Parallax Image -->
+    <div class="bgimg w3-display-container w3-opacity-min">
+        <div class="w3-display-bottommiddle w3-padding-64" style="white-space:nowrap;">
+            <span class=" w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">TYPES <span
+                    class="w3-hide-small">OF COFFEE</span></span>
+        </div>
+    </div>
+
+    <section>
+        <!-- Container (Coffee Types Section) -->
+        <div class="w3-content w3-container w3-padding-32">
+            <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16 w3-margin w3-center">Types of coffee</h3>
+            <p class="w3-margin  w3-center"><em>Here are some of the most popular coffee types drunk by irish
+                    people</em></p><br>
+
+            <!-- First Photo Grid-->
+            <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+                <div class="w3-quarter">
+                    <img src="images/americano.jpg" alt="Caffè Americano" onclick="onClick(this)"
+                        class="w3-hover-opacity grid-image">
+                    <h3>Caffè Americano</h3>
+                    <p>An Americano is simply an espresso that has been poured over, or been diluted with hot water.</p>
+                </div>
+
+                <div class="w3-quarter">
+                    <img src="images/esspresso.jpg" alt="Espresso" onclick="onClick(this) "
+                        class="w3-hover-opacity grid-image">
+                    <h3>Espresso </h3>
+                    <p>Espresso is a full-flavored, concentrated form of coffee that is served in “shots.” </p>
+                </div>
+
+                <div class="w3-quarter">
+                    <img src="images/latte.jpg" alt="Latte" onclick="onClick(this)"
+                        class="w3-hover-opacity grid-image">
+                    <h3>Café Latte</h3>
+                    <p>A caffè latte is simply a shot or two of bold, tasty espresso with fresh, sweet steamed milk over
+                        it.
+                    </p>
+                </div>
+
+                <div class="w3-quarter">
+                    <img src="images/machiato.jpg" alt="Macchiato" onclick="onClick(this)"
+                        class="w3-hover-opacity grid-image">
+                    <h3>Espresso macchiato</h3>
+                    <p>The espresso macchiato is an espresso topped with steamed milk foam
+                    </p>
+                </div>
+            </div>
+
+            <!--Second Photo grid -->
+            <div class="w3-row-padding w3-padding-16 w3-center">
+                <div class="w3-quarter">
+                    <img src="images/iced-latte.jpg" alt="Iced Latte" onclick="onClick(this)"
+                        class="w3-hover-opacity grid-image ">
+                    <h3>Iced Latte</h3>
+                    <p>A summer version of Café Latte with ice </p>
+                </div>
+
+                <div class="w3-quarter">
+                    <img src="images/cappuchino.jpg" alt="Cappuccino" onclick="onClick(this)"
+                        class="w3-hover-opacity grid-image">
+                    <h3>Cappuccino</h3>
+                    <p>A cappuccino is an espresso-based coffee drink that is traditionally prepared with steamed milk
+                        foam
+                        (microfoam).</p>
+                </div>
+
+                <div class="w3-quarter">
+                    <img src="images/flat-white.jpg" alt="Flat White" onclick="onClick(this)"
+                        class="w3-hover-opacity grid-image">
+                    <h3>Flat White</h3>
+                    <p>It is comparable to a latte, but smaller in volume and with less microfoam.</p>
+                </div>
+
+                <div class="w3-quarter">
+                    <img src="images/irish-coffee.jpg" alt="Irish Coffee" onclick="onClick(this)"
+                        class="w3-hover-opacity grid-image">
+                    <h3>Irish Coffee</h3>
+                    <p>It`s a cocktail consisting of hot coffee, Irish whiskey, and sugar, stirred, and topped with
+                        cream.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for full size images on click-->
+        <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+            <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i
+                    class="fa fa-remove"></i></span>
+            <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                <img id="img01" class="w3-image" width="30%" height="20%">
+                <p id="caption" class="w3-opacity w3-large"></p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-32 w3-opacity w3-hover-opacity-off">
+        <p>Yuliia Dovbak</p>
+        <p>A00277458</p>
+    </footer>
+
+    <script>
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function toggleFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+</body>
+</html>

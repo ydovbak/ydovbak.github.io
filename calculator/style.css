@@ -24,6 +24,11 @@ body {
  * Grid
  */
 
+.themed-container {
+  padding: 10px;
+  margin-bottom: 25px;
+}
+
 .input-grid {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -94,6 +99,6 @@ body {
 /*
  * Footer
  */
-.foot {
+.mastfoot {
   color: rgba(255, 255, 255, .5);
 }

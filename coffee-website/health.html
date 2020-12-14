@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    /*Health paralax image  */
+    .bgimg {
+        background-image: url("images/paralax-health.jpg");
+    }
+</style>
+
+<title>Coffee Art</title>
+
+<body>
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar w3-card w3-white" id="myNavbar">
+            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
+                href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="index.html" class="w3-bar-item w3-button"><i class="fa fa-coffee"></i> HOME</a>
+            <a href="types.html" class="w3-bar-item w3-button w3-hide-small "><i class="fa fa-th"></i> TYPES</a>
+            <a href="health.html" class="w3-bar-item w3-button w3-hide-small "><i class="fa fa-heart"></i> HEALTH</a>
+            <a href="latte-art.html" class="w3-bar-item w3-button w3-hide-small "><i class="fa fa-pagelines"></i> LATTE
+                ART</a>
+            <a href="report.html" class="w3-bar-item w3-button w3-hide-small "><i class="fa fa-align-left"></i>
+                REPORT</a>
+            <a href="contact.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+            <a href="types.html" class="w3-bar-item w3-button" ">TYPES</a>
+			<a href=" health.html" class="w3-bar-item w3-button">HEALTH</a>
+            <a href="latte-art.html" class="w3-bar-item w3-button">LATTE ART</a>
+            <a href="report.html" class="w3-bar-item w3-button">REPORT</a>
+            <a href="contact.html" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+        </div>
+    </div>
+
+    <!--Parallax Image with Logo Text -->
+    <div class="bgimg w3-display-container w3-opacity-min">
+        <div class="w3-display-bottommiddle w3-padding-64" style="white-space:nowrap;">
+            <span class=" w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">HEALTH</span>
+        </div>
+    </div>
+
+
+
+    <!--Health Section-->
+    <!-- Container (About Section) -->
+    <div class="w3-content w3-container w3-padding-32" id="health">
+        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16 w3-margin w3-center">How coffee impacts your health?</h3>
+        <div class="w3-margin">
+            <p>
+                Coffee has been around for a long time and blamed for many ills — from stunting your growth to causing
+                heart
+                disease — but newer research shows that it may actually have health benefits.<br /><br />
+                Recent studies have generally found no connection between coffee and an increased risk of heart disease
+                or
+                cancer.<br /><br />
+                In fact, some studies have found an association between coffee consumption and decreased
+                overall mortality and
+                possibly cardiovascular mortality, although this may not be true in younger people who drink large
+                amounts
+                of
+                coffee. <br /><br />
+            </p>
+
+            <p>
+
+                <img src="images/about2.jpg" class="w3-round w3-image text-image" alt="Coffee picture">
+                Why the apparent reversal in the thinking about coffee? Earlier studies didn't always take into
+                account that
+                known high-risk behaviors, such as smoking and physical inactivity, tended to be more common among
+                heavy
+                coffee
+                drinkers.<br /><br />
+                Studies have shown that coffee may have health benefits, including protecting against Parkinson's
+                disease,
+                type
+                2 diabetes and liver disease, including liver cancer. Coffee also appears to improve cognitive
+                function and
+                decrease the risk of depression.<br /><br />
+                However, the research appears to bear out some risks. High consumption of unfiltered coffee (boiled
+                or
+                espresso)
+                has been associated with mild elevations in cholesterol levels.<br /><br />
+                In addition, some studies found that two or more cups of coffee a day can increase the risk of heart
+                disease
+                in
+                people with a specific — and fairly common — genetic mutation that slows the breakdown of caffeine
+                in the
+                body.
+                So, how quickly you metabolize coffee may affect your health risk.<br /><br />Although coffee may
+                have fewer risks compared with benefits, keep in mind that
+                other
+                beverages, such as milk and
+                some fruit juices, contain nutrients that coffee doesn't. Also, adding cream and sugar to your
+                coffee adds fat
+                and calories — up to hundreds of calories in some cases.
+            </p>
+
+            <p>
+                <em>
+                    Hensrud, D. (2019). The surprising health benefits of coffee. [online] Mayo Clinic. Available at:
+                    https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/expert-answers/coffee-and-health/faq-20058339
+                    [Accessed 7 Oct. 2019].
+                </em>
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-32 w3-opacity w3-hover-opacity-off">
+        <p>Yuliia Dovbak</p>
+        <p>A00277458</p>
+    </footer>
+
+    <script>
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function toggleFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+</body>

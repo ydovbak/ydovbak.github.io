@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+	/* Paralax image (Coffee home) */
+	.bgimg {
+		background-image: url('images/paralax-home.jpg');
+	}
+</style>
+
+<title>Coffee Art</title>
+
+<body>
+	<!-- Navbar (sit on top) -->
+	<div class="w3-top">
+		<div class="w3-bar w3-card w3-white" id="myNavbar">
+			<a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
+				href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+				<i class="fa fa-bars"></i>
+			</a>
+			<a href="index.html" class="w3-bar-item w3-button"><i class="fa fa-coffee"></i> HOME</a>
+			<a href="types.html" class="w3-bar-item w3-button w3-hide-small "><i class="fa fa-th"></i> TYPES</a>
+			<a href="health.html" class="w3-bar-item w3-button w3-hide-small "><i class="fa fa-heart"></i> HEALTH</a>
+			<a href="latte-art.html" class="w3-bar-item w3-button w3-hide-small "><i class="fa fa-pagelines"></i> LATTE
+				ART</a>
+			<a href="report.html" class="w3-bar-item w3-button w3-hide-small "><i class="fa fa-align-left"></i>
+				REPORT</a>
+			<a href="contact.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i>
+				CONTACT</a>
+		</div>
+
+		<!-- Navbar on small screens -->
+		<div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+			<a href="types.html" class="w3-bar-item w3-button" ">TYPES</a>
+			<a href=" health.html" class="w3-bar-item w3-button">HEALTH</a>
+			<a href="latte-art.html" class="w3-bar-item w3-button">LATTE ART</a>
+			<a href="report.html" class="w3-bar-item w3-button">REPORT</a>
+			<a href="contact.html" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+		</div>
+	</div>
+
+	<!--First Parallax Image with Logo Text -->
+	<div class="bgimg w3-display-container w3-opacity-min">
+		<div class="w3-display-bottommiddle w3-padding-64" style="white-space:nowrap;">
+			<span class=" w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">COFFEE <span
+					class="w3-hide-small">ART</span></span>
+		</div>
+	</div>
+
+	<!-- Container (About Section) -->
+	<div class="w3-content w3-container w3-padding-16">
+		<h3 class="w3-border-bottom w3-border-light-grey w3-padding-16 w3-margin w3-center">ABOUT</h3>
+		<p></p>
+		<div class="w3-row">
+			<p class="w3-margin w3-center"><em>We all love coffee</em></p><br>
+			<p class="w3-margin">
+				<img src="images/about-coffee.jpg" class="w3-round w3-image text-image" alt="Coffee photo">
+
+				Coffee is among the most consumed — and controversial — beverages in the world. While coffee should
+				be treated with care and avoided altogether by those who metabolize it poorly, it also provides health
+				benefits to many people. <br /><br />
+
+				Coffee is the second most popular drink in the world, trailing only water and, debatably, tea.
+				Caffeine, a key component of coffee, is a controversial compound. With 90% of North American adults
+				consuming caffeine daily, it is the world’s most consumed psychoactive drug – and coffee is the
+				delivery method of choice.<br /><br />
+
+				Perhaps that’s why, in the fitness world, we’ve traditionally viewed coffee with some
+				suspicion.But is coffee really bad for us? Should we give up our beloved cuppa joe? If it’s bad, why
+				does it
+				feel so good?</p>
+		</div>
+	</div>
+
+	<!--Most popular coffee shops list-->
+	<div class="w3-content w3-container">
+		<h3 class="w3-border-bottom w3-border-light-grey w3-padding-16 w3-margin w3-center">Most popular coffee shops in Ireland
+		</h3>
+		<p class="w3-margin w3-center"><em>Here is a list of best coffee shops in my opinion</em></p><br>
+
+		<div class="w3-container w3-margin">
+			<ul class="w3-ul w3-card-4">
+				<li class="w3-bar">
+					<img src="images/logos/costa_logo.png" class="w3-bar-item w3-circle w3-hide-small"
+						style="width:85px">
+					<div class="w3-bar-item">
+						<span class="w3-large"><a href="https://www.costaireland.ie/" target="_blank"> Costa
+							</a></span><br>
+						<span>Founded in 1971, London, United Kingdom</span>
+					</div>
+				</li>
+				<li class="w3-bar">
+					<img src="images/logos/starbucks_logo.png" class="w3-bar-item w3-circle w3-hide-small"
+						style="width:85px">
+					<div class="w3-bar-item">
+						<span class="w3-large"><a href="https://www.starbucks.ie"
+								target="_blank">Starbucks</a></span><br>
+						<span>Founded in 1971, Pike Place Market, Seattle, Washington, United States</span>
+					</div>
+				</li>
+				<li class="w3-bar">
+					<img src="images/logos/caffe_nero.jpg" class="w3-bar-item w3-circle w3-hide-small"
+						style="width:85px">
+					<div class="w3-bar-item">
+						<span class="w3-large"><a href="https://caffenero.com/ie/" target="_blank">Cafe
+								Nero</a></span><br>
+						<span>Founded in 1997, United Kingdom</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<!--Responcive layout-->
+		<div class="w3-container w3-margin">
+			<div class=" w3-row w3-center w3-dark-grey w3-padding-16">
+				<div>
+					<p1 class="w3-center">
+						Stores all over the world
+					</p1>
+				</div>
+				<div class="w3-third w3-section">
+					<span class="w3-xlarge">24,395+</span><br>
+					STARBUCKS
+				</div>
+				<div class="w3-third w3-section">
+					<span class="w3-xlarge">3,882+</span><br>
+					COSTA
+				</div>
+				<div class="w3-third w3-section">
+					<span class="w3-xlarge">822 +</span><br>
+					CafeNero
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<footer class="w3-center w3-black w3-padding-32 w3-opacity w3-hover-opacity-off">
+		<p>Yuliia Dovbak</p>
+		<p>A00277458</p>
+	</footer>
+
+	<script>
+		// Used to toggle the menu on small screens when clicking on the menu button
+		function toggleFunction() {
+			var x = document.getElementById("navDemo");
+			if (x.className.indexOf("w3-show") == -1) {
+				x.className += " w3-show";
+			} else {
+				x.className = x.className.replace(" w3-show", "");
+			}
+		}
+	</script>
+
+</body>
+
+</html>

@@ -6,6 +6,7 @@ function $(id) {
 
 
 window.onload = function () {
+
     //Focus the input
     $("userInput").focus();
 
@@ -21,12 +22,11 @@ window.onload = function () {
     $("nineBtn").onclick = simpleBtnClicked;
     $("zeroBtn").onclick = simpleBtnClicked;
 
-    // Buttons  + - / * =
+    // Buttons  + - / * 
     $("plusBtn").onclick = simpleBtnClicked;
     $("minusBtn").onclick = simpleBtnClicked;
     $("multiplyBtn").onclick = multiplyBtnClicked;
     $("divideBtn").onclick = divideBtnClicked;
-    $("equalstBtn").onclick = evaluate;
 
     // Dot and brackets 
     $("dotBtn").onclick = simpleBtnClicked;
@@ -35,7 +35,11 @@ window.onload = function () {
 
     //Delete buttons
     $("eraseBtn").onclick = eraseInput;
-    $("deleteBtn").onclick = deleteLastInput;
+    $("deleteBtn").onclick = deleteLastIput;
+
+    $("equalstBtn").onclick = evaluate;
+
+
 };
 
 function evaluate() {
@@ -88,9 +92,11 @@ function isDelete(event) {
 }
 
 
-//All button clicks where button content fully corresponds 
-//to operation input needed
+//All button clicks where button content fully corresponds to operation input needed
 function simpleBtnClicked() {
+    //Get access to input field
+    var inputField = $("userInput");
+
     //Get the number corresponding to the id
     var number = this.firstElementChild.innerHTML;
 
@@ -101,6 +107,9 @@ function simpleBtnClicked() {
 
 //Function that handles Multiply button click
 function multiplyBtnClicked() {
+    //Get access to input field 
+    var inputField = $("userInput");
+
     //Writing multiply sign into the input field
     putSymbbolOnPosition("*", getCaretPosition());
     resetResult();
@@ -108,12 +117,23 @@ function multiplyBtnClicked() {
 
 //Function that handles Multiply button click
 function divideBtnClicked() {
+    //Get access to input field 
+    var inputField = $("userInput");
+
     //Writing divide sign into the input field
     putSymbbolOnPosition("/", getCaretPosition());
     resetResult();
 };
 
+//This method is writing the synbol into the required position in input field
+function putSymbbolOnPosition(symbol, position) {
+    var input = $("userInput").value;
+    var result = input.slice(0, position) + symbol + input.slice(position);
+    $("userInput").value = result;
 
+    //Moving caret forward by 1
+    setCaretPosition(position + 1);
+}
 
 //Clear the input
 function eraseInput() {
@@ -123,8 +143,9 @@ function eraseInput() {
 };
 
 
-//Delete value or sign before the caret
-function deleteLastInput() {
+//Delete last value or sign entered into the input field
+function deleteLastIput() {
+
     //Get access to input field 
     var userInput = $("userInput").value;
     var caretPosition = getCaretPosition();
@@ -134,6 +155,7 @@ function deleteLastInput() {
 
         //If caret is in the end, delete last element
         if (caretPosition == userInput.length) {
+
             $("userInput").value = userInput.substring(0, userInput.length - 1);
 
             //If the resulting input if not empty, leaving focus in the end of the input
@@ -142,8 +164,7 @@ function deleteLastInput() {
             }
         } else {
             //Deleting the element behind the caret
-            $("userInput").value = userInput.slice(0, caretPosition - 1) +
-                userInput.slice(caretPosition, userInput.length);
+            $("userInput").value = userInput.slice(0, caretPosition - 1) + userInput.slice(caretPosition, userInput.length);
 
             //Leaving caret in the same position
             setCaretPosition(caretPosition - 1);
