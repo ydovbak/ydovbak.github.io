@@ -39,7 +39,7 @@
 <body>
 
   <!-- start section navbar -->
-  <nav id="main-nav">
+  <nav id="main-nav" >
     <div class="row">
       <div class="container">
 
@@ -53,6 +53,7 @@
           <li><a href="#header" class="smoothScroll">Home</a></li>
           <li><a href="#about" class="smoothScroll">About Me</a></li>
           <li><a href="#portfolio" class="smoothScroll">Portfolio</a></li>
+          <li><a href="#awards" class="smoothScroll">Awards</a></li>
           <li><a href="#journal" class="smoothScroll">CV</a></li>
         </ul>
 
@@ -80,24 +81,19 @@
           <div class="about-descr">
 
             <p class="p-heading">About me </p>
-            
+
             <p>Enthusiastic graduate software engineer with strong software engineering foundation. Have gained
               professional experience while working in Ericsson on summer internship and on 9-month placement. Worked in
               an agile environment on a highly technical project CBRS. During placement I improved my knowledge on cloud
               technologies and linux.
             </p>
-            <p>Awarded:</p>
-            <ul>
-              <li>Student of the Year 2021 in Technological University of the Shannon: Midlands Midwest</li>
-              <li>Student of the Year 2021 in the Faculty of Engineering and Informatics.</li>
-              <li>Student of the Year 2022 in the Faculty of Engineering and Informatics.</li>
-            </ul>
             <p>Working as a TUS Student Ambassador, engaging with potential students on Open Days, trying to bring more
               females into the STEM courses and industries.
             </p>
             <p>Looking for a graduate software developer position in the field of Cloud.</p>
           </div>
 
+  
         </div>
       </div>
     </div>
@@ -176,11 +172,26 @@
               <li class="filter" data-filter=".webdesign">web design</li>
               <li class="filter" data-filter=".digital">digital media</li>
               <li class="filter" data-filter=".game">game dev</li>
+              <li class="filter" data-filter=".android">android</li>
             </ul>
 
           </div>
 
           <div class="portfolio-container">
+
+            <div class="col-lg-4 col-md-6 portfolio-thumbnail all android">
+              <div class="card">
+                <img class="card-img-top" src="images/portfolio/Staycation.JPG" alt="Card image"
+                  style="width:100%">
+                <div class="card-body">
+                  <h4 class="card-title">Android Studio Project</h4>
+                  <p class="card-text">Staycation App</p>
+                  <a href="project-android-staycation.html" class="btn btn-dark btn-rounded" target="_blank">See Project</a>
+                </div>
+              </div>
+            </div>
+
+
             <div class="col-lg-4 col-md-6 portfolio-thumbnail all webdesign">
               <div class="card">
                 <img class="card-img-top" src="images/portfolio/weather-website3.png" alt="Card image"
@@ -189,6 +200,18 @@
                   <h4 class="card-title">Web development project</h4>
                   <p class="card-text"> Weather Website</p>
                   <a href="/weather/index.html" class="btn btn-dark btn-rounded" target="_blank">See Project</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-thumbnail all android">
+              <div class="card">
+                <img class="card-img-top" src="images/portfolio/map.png" alt="Card image"
+                  style="width:100%">
+                <div class="card-body">
+                  <h4 class="card-title">Android Studio Project</h4>
+                  <p class="card-text">Trails App</p>
+                  <a href="project-android-trails.html" class="btn btn-dark btn-rounded" target="_blank">See Project</a>
                 </div>
               </div>
             </div>
@@ -269,9 +292,46 @@
   </div>
   <!-- End section portfolio -->
 
+  <!-- start section Awards -->
+  <div id="awards" class="bg-light text-center paddsection">
+
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>Awards</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="contact-block1">
+        <div class="row">
+
+          <div class="col-lg-6">
+            <img src="images/awards1.JPG" class="img-responsive" alt="award"
+              style="width:100%">
+
+
+          </div>
+
+          <div class="col-lg-6">
+            <div style="padding-left: 40px;">
+              <div class="text-left">
+                  <p class="pt-5">Student of the Year 2022 in the Faculty of Engineering and Informatics.</p>
+                  <p>Student of the Year 2021 in Technological University of the Shannon: Midlands Midwest. <u><a href="images/awards2.JPG">Photo</a></u></p>
+                  <p>Student of the Year 2021 in the Faculty of Engineering and Informatics. <u><a href="images/awards3.JPG">Photo</a></u></p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- End section Awards -->
+
 
   <!-- start section resume -->
-  <div id="journal" class="text-left paddsection">
+  <div id="journal" class="text-left paddsection bg-white">
 
     <div class="container">
       <div class="contact-block1">
@@ -323,7 +383,6 @@
         </li>
         <li><a href="https://github.com/ydovbak" target="_blank"><i class="ion-social-github"></i></a>
         </li>
-        <li><a href="https://twitter.com/YuliiaDovbak" target="_blank"><i class="ion-social-twitter"></i></a></li>
         <li><a href="https://www.linkedin.com/in/yuliia-dovbak-7468631ba/" target="_blank"><i
               class="ion-social-linkedin"></i></a>
       </ul>

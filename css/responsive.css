@@ -70,7 +70,7 @@
     display: inline-block;
   }
   /* journal */
-  #journal .journal-block .journal-info {
+  #journal #awards .journal-block .journal-info {
     margin-bottom: 30px;
   }
   /* Contact */

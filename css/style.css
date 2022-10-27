@@ -20,6 +20,7 @@ body {
   overflow-x: hidden;
   margin: 0 auto;
   padding: 0;
+  padding-top: 60px;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
@@ -187,14 +188,19 @@ li{
 
 nav {
   position: fixed;
+  top: 0;
   background: #fff;
-  z-index: 1000;
+  z-index: 1;
   width: 100%;
-  padding: 20px;
+  padding: 10px;
   display: none;
   -webkit-box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.18);
   -moz-box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.18);
   box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.18);
+}
+
+#main-nav {
+  display: block;
 }
 
 .nav-menu {
@@ -300,7 +306,6 @@ nav ul li a {
   width: 100%;
   height: auto;
   background: #f7f7f7;
-  padding-top: 190px;
 }
 
 #about .div-img-bg {
@@ -461,7 +466,7 @@ nav ul li a {
 /*  Journal
 /*-----------------------------------------------------------------------------------*/
 
-#journal,  #journal-blog {
+#journal, #awards #journal-blog {
   height: auto;
   width: 100%;
   background: #f7f7f7;
@@ -474,13 +479,13 @@ nav ul li a {
   padding-bottom: 30px;
 }
 
-#journal .journal-block {
+#journal #awards .journal-block {
   display: inline-block;
   height: auto;
   width: 100%;
 }
 
-#journal .journal-block .journal-info {
+#journal #awards .journal-block .journal-info {
   position: relative;
 }
 
