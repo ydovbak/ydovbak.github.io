@@ -10,3 +10,5 @@ window.onload = function(){
     console.log(calculate_age(new Date(1996, 12, 10)));
     document.getElementById("age").innerText = calculate_age(new Date(1996, 12, 10));
 }
+
+document.getElementById('current-year').textContent = new Date().getFullYear();
