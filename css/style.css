@@ -1,4 +1,3 @@
-
 /*
   Theme Name: Folio
   Theme URL: https://bootstrapmade.com/folio-bootstrap-portfolio-template/
@@ -335,10 +334,10 @@ nav ul li a {
 }
 
 /*-----------------------------------------------------------------------------------*/
-/*   Services
+/*   Skills
 /*-----------------------------------------------------------------------------------*/
 
-#services {
+#skills {
   background: #f7f7f7;
   position: relative;
   padding-bottom: 80px;
@@ -347,7 +346,7 @@ nav ul li a {
 .owl-item {
   float: left;
 }
-.services-block span {
+.skills-block span {
   margin: 10px 0;
   position: relative;
   font-size: 13px;
@@ -358,29 +357,29 @@ nav ul li a {
   display: block;
 }
 
-.services-block .separator {
+.skills-block .separator {
   margin: 0;
   font-size: 13px;
   line-height: 22px;
 }
 
-.services-block i {
+.skills-block i {
   font-size: 44px;
   color: #b8a07e;
   line-height: 44px;
 }
 
 
-.services-carousel  .owl-stage-outer {
+.skills-carousel  .owl-stage-outer {
   overflow: hidden;
 }
 
-.services-carousel .owl-dots {
+.skills-carousel .owl-dots {
   margin-top: 5px;
   text-align: center;
 }
 
-.services-carousel .owl-dot {
+.skills-carousel .owl-dot {
   display: inline-block;
   margin: 0 5px;
   width: 12px !important;
@@ -392,7 +391,7 @@ nav ul li a {
   cursor: pointer;
 }
 
-.services-carousel .owl-dot.active {
+.skills-carousel .owl-dot.active {
   background-color: #b8a07e;
 }
 
@@ -400,26 +399,77 @@ nav ul li a {
   display: none;
 }
 
+/*-----------------------------------------------------------------------------------*/
+/*  Spotlight
+/*-----------------------------------------------------------------------------------*/
+
+
+.photo-stack {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.photo-stack img {
+  width: auto;
+  height: 300px;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.photo-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.stack-1 .photo-front {
+  position: absolute;
+  top: 60px;
+  left: 300px;
+  z-index: 2;
+}
+
+.stack-2 .photo-front {
+  position: absolute;
+  top: 60px;
+  left: 200px;
+  z-index: 2;
+}
+
+.photo-stack img:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.presentation-description {
+  padding: 20px;
+}
+
 
 /*-----------------------------------------------------------------------------------*/
-/*  Portfolio
+/*  Projects
 /*-----------------------------------------------------------------------------------*/
 
-#portfolio {
+#projects {
   position: relative;
   padding-bottom: 50px;
 }
 
-#portfolio .portfolio-list {
+#projects .projects-list {
   margin-bottom: 50px;
 }
 
-#portfolio .portfolio-list .nav {
+#projects .projects-list .nav {
   display: inline-block;
   margin: 0;
 }
 
-#portfolio .portfolio-list .nav li {
+#projects .projects-list .nav li {
   margin: 0 40px 0 0;
   float: left;
   font-size: 14px;
@@ -437,7 +487,7 @@ nav ul li a {
   transition: all 0.5s ease-in-out 0s;
 }
 
-#portfolio .portfolio-list .nav li:hover, #portfolio .portfolio-list .nav li.filter-active  {
+#projects .projects-list .nav li:hover, #projects .projects-list .nav li.filter-active  {
   color: #b8a07e;
   -moz-transition: all 0.5s ease-in-out 0s;
   -ms-transition: all 0.5s ease-in-out 0s;
@@ -446,19 +496,19 @@ nav ul li a {
   transition: all 0.5s ease-in-out 0s;
 }
 
-#portfolio .portfolio-container {
+#projects .projects-container {
   display: inline-block;
   margin-bottom: 50px;
   width: 100%;
 }
 
-.portfolio-thumbnail {
+.projects-thumbnail {
   margin-bottom: 30px;
   overflow: hidden;
   min-height: 260px;
 }
 
-.portfolio-thumbnail img {
+.projects-thumbnail img {
   max-width: 100%;
 }
 

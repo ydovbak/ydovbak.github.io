@@ -52,7 +52,7 @@
         <ul class="nav-menu list-unstyled">
           <li><a href="#header" class="smoothScroll">Home</a></li>
           <li><a href="#about" class="smoothScroll">About Me</a></li>
-          <li><a href="#portfolio" class="smoothScroll">Portfolio</a></li>
+          <li><a href="#projects" class="smoothScroll">Projects</a></li>
           <li><a href="#awards" class="smoothScroll">Awards</a></li>
           <li><a href="#journal" class="smoothScroll">CV</a></li>
         </ul>
@@ -101,22 +101,22 @@
   <!-- end section about us -->
 
 
-  <!-- start section services -->
-  <div id="services">
+  <!-- start section skills -->
+  <div id="skills" class="bg-white">
 
     <!--Title-->
 
-    <div class="section-title text-center" id="title-margin">
+    <div class="section-title text-center paddsection">
       <h2>Skills & Knowledge</h2>
     </div>
 
 
-    <div class="container ">
+    <div class="container">
 
       <div class="owl-theme d-flex justify-content-center">
         <div class="row w-100">
           <div class="col-md-4">
-            <div class="services-block">
+            <div class="skills-block">
               <i class="ion-code-working"></i>
               <span> Languages</span>
               <p class="separator">Java, Python, Bash, Javascript, SQL</p>
@@ -124,7 +124,7 @@
           </div>
 
           <div class="col-md-4">
-            <div class="services-block">
+            <div class="skills-block">
               <i class="ion-ios-color-wand-outline"></i>
               <span> Technologies </span>
               <p class="separator">Kubernetes, Docker, Helm, CI/CD, REST, Flask, Grafana, Prometheus</p>
@@ -132,7 +132,7 @@
           </div>
 
           <div class="col-md-4">
-            <div class="services-block">
+            <div class="skills-block">
               <i class="ion-ios-analytics-outline"></i>
               <span>Tools</span>
               <p class="separator">Jira, Confluence, Jenkins, Vim, git </p>
@@ -145,14 +145,56 @@
   </div>
   <!-- end section services -->
 
+  <!-- start section spotlight-->
+  <div id="spotlights"  class="paddsection bg-light">
+    <div class="container">
+      <div class="section-title ">
+        <h2 class="text-center" >Presentations & Talks</h2>
+
+        <div class="row mt-5">
+          <div class="col-lg-6">
+            <div class="photo-stack stack-1">
+              <img src="images/events/career_fair1.PNG" class="photo-front" alt="First presentation">
+              <img src="images/events/career_fair2.PNG" class="photo-back" alt="Second presentation">
+            </div>
+          </div>
+          
+          <div class="col-lg-6 d-flex align-items-center">
+            <div class="presentation-description">
+              <h4>Career Fairs in Galway ATU</h4>
+              <p>It's always exciting to talk to young talent, though let’s be real, some are just there to snag the free merch! </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-lg-6 d-flex">
+            <div class="presentation-description text-end">
+              <h4>ENM Showcase</h4>
+              <p>ENM—Ericsson Network Manager—is easily Ericsson’s biggest product. </p>
+              <p>Summing up a project that massive into a 15-minute presentation was no small feat.</p>
+              <p>Our team pulled it off brilliantly, and I gained some solid insights into how ENM performs out in the real world.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="photo-stack stack-2">
+              <img src="images/events/career_fair3.JPG" class="photo-front" alt="First presentation">
+              <img src="images/events/career_fair4.JPG" class="photo-back" alt="Second presentation">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
-  <!-- start section portfolio -->
-  <div id="portfolio" class="text-center paddsection">
+  <!-- start section projects -->
+  <div id="projects" class="text-center paddsection">
 
     <div class="container">
       <div class="section-title text-center">
-        <h2>My Portfolio</h2>
+        <h2>My Projects</h2>
       </div>
     </div>
 
@@ -160,9 +202,9 @@
       <div class="row">
         <div class="col-md-12">
 
-          <div class="portfolio-list">
+          <div class="projects-list">
 
-            <ul class="nav list-unstyled" id="portfolio-flters">
+            <ul class="nav list-unstyled" id="projects-flters">
               <li class="filter filter-active" data-filter=".all">all</li>
               <li class="filter" data-filter=".webdesign">web design</li>
               <li class="filter" data-filter=".digital">digital media</li>
@@ -172,9 +214,9 @@
 
           </div>
 
-          <div class="portfolio-container">
+          <div class="projects-container">
 
-            <div class="col-lg-4 col-md-6 portfolio-thumbnail all android">
+            <div class="col-lg-4 col-md-6 projects-thumbnail all android">
               <div class="card">
                 <img class="card-img-top" src="images/portfolio/Staycation.JPG" alt="Card image"
                   style="width:100%">
@@ -187,7 +229,7 @@
             </div>
 
 
-            <div class="col-lg-4 col-md-6 portfolio-thumbnail all webdesign">
+            <div class="col-lg-4 col-md-6 projects-thumbnail all webdesign">
               <div class="card">
                 <img class="card-img-top" src="images/portfolio/weather-website3.png" alt="Card image"
                   style="width:100%">
@@ -199,7 +241,7 @@
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-thumbnail all android">
+            <div class="col-lg-4 col-md-6 projects-thumbnail all android">
               <div class="card">
                 <img class="card-img-top" src="images/portfolio/map.png" alt="Card image"
                   style="width:100%">
@@ -211,7 +253,7 @@
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-thumbnail all webdesign">
+            <div class="col-lg-4 col-md-6 projects-thumbnail all webdesign">
               <div class="card">
                 <img class="card-img-top" src="images/portfolio/calc-website.png" alt="Card image" style="width:100%">
                 <div class="card-body">
@@ -222,7 +264,7 @@
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-thumbnail all webdesign">
+            <div class="col-lg-4 col-md-6 projects-thumbnail all webdesign">
               <div class="card">
                 <img class="card-img-top" src="images/portfolio/web.jpg" alt="Card image" style="width:100%">
                 <div class="card-body">
@@ -233,7 +275,7 @@
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-thumbnail all game">
+            <div class="col-lg-4 col-md-6 projects-thumbnail all game">
               <div class="card">
                 <img class="card-img-top" src="images/portfolio/industrial.jpg" alt="Card image" style="width:100%">
                 <div class="card-body">
@@ -246,7 +288,7 @@
 
 
 
-            <div class="col-lg-4 col-md-6 portfolio-thumbnail all digital">
+            <div class="col-lg-4 col-md-6 projects-thumbnail all digital">
               <div class="card">
                 <img class="card-img-top" src="images/portfolio/screencast.jpg" alt="Card image" style="width:100%">
                 <div class="card-body">
@@ -257,7 +299,7 @@
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-thumbnail all game">
+            <div class="col-lg-4 col-md-6 projects-thumbnail all game">
               <div class="card">
                 <img class="card-img-top" src="images/portfolio/hacking.jpg" alt="Card image" style="width:100%">
                 <div class="card-body">
@@ -268,7 +310,7 @@
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-thumbnail all webdesign">
+            <div class="col-lg-4 col-md-6 projects-thumbnail all webdesign">
               <div class="card">
                 <img class="card-img-top" src="images/portfolio/web-js.png" alt="Card image" style="width:100%">
                 <div class="card-body">
@@ -285,9 +327,9 @@
     </div>
 
   </div>
-  <!-- End section portfolio -->
+  <!-- End section projects -->
 
-  <!-- start section Awards -->
+  <!-- Start section Awards -->
   <div id="awards" class="bg-light text-center paddsection">
 
     <div class="container">
