@@ -1,5 +1,5 @@
 "use strict";
-const ApiKey = 'f4a88f380ea81884743aec0bbf45f133';
+const ApiKey = 'c7a1e555a10286246f98bca3cbecc656';
 let lat;                        // ltitude of the searched city
 let lon;                        // longitude of the searched city
 let mainAPIresponse;            // response with current and weekly weather forecast
@@ -217,6 +217,7 @@ const updateUI = (lat, lon, unit) => {
 const handleCurrDayForecastCallback = (err, response) => {
     if (err) {
         console.log("Error in API call");
+        console.log(err);
     } else {
         mainAPIresponse = response;
         fillMainWeatherPanel(mainAPIresponse);
