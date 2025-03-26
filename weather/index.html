@@ -76,7 +76,6 @@
                 <p></p>Humidity: <span id="humidity"></span></p>
                 <p>Wind speed: <span id="wind-speed"></span></p>
                 <p>Wind direction: <span id="wind-dir"></span></p>
-                <p>UV index: <span id="uv-index"></span></p>
                 <p>Pressure: <span id="pressure"></span></p>
                 <p>Visibility: <span id="visibility"></span></p>
                 <p>Cloudiness: <span id="clouds"></span></p>
@@ -117,46 +116,11 @@
         </div>
     </div>
 
-    <!--Weekly temperature breakdown-->
+    <!--Air pollution breakdown-->
     <div class="container days-container px-5 py-3 mb-4 shadow-sm weather-card text-center">
-        <h3 class="pb-3"><span class="brand-line">Weekly</span></h3>
-        <div class="row align-items-center" id="weekly-panel">
+        <h3 class="pb-3"><span class="brand-line">Air pollution</span></h3>
+        <div class="row align-items-center" id="air-pollution-panel">
             <p>Loading...</p>
-        </div>
-    </div>
-
-    <!--Charts-->
-    <div class="container days-container px-5 py-3 mb-4 shadow-sm weather-card">
-        <h3 class="text-center"> <span class="brand-line">Charts</span></h3>
-
-        <div class="dropdown m-1 p-1 text-center">
-            <button class="btn dropdown-toggle btn-blue text-white" id="chart-dropdown" type="button"
-                data-toggle="dropdown"> Temperature
-                <span class="caret"></span></button>
-            <ul class="dropdown-menu">
-                <li>
-                    <a class="dropdown-item d-flex align-items-center" id="chart-temp">
-                        <i class="fas fa-temperature-high brand-color icon-center mr-3"></i>
-                        <span>Temperature</span>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item d-flex align-items-center" id="chart-hum">
-                        <i class="fas fa-tint brand-color icon-center mr-3"></i>
-                        <span>Humidity</span>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item d-flex align-items-center" id="chart-cloud">
-                        <i class="fas fa-cloud brand-color icon-center mr-3"></i>
-                        <span>Cloudiness</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="" id="charts-panel">
-            <canvas id="chart-canvas" class="w-100" height="500"></canvas>
         </div>
     </div>
 

@@ -173,27 +173,6 @@ window.onload = () => {
             fillHourlyBreakdown(threeHourAPIresponse);
         });
     };
-
-    //
-    // charts 
-    //
-    $('#chart-temp').addEventListener('click', () => {
-        $('#chart-dropdown').innerText = "Temperature";
-        chartType = 'temperature';
-        createDailyChart(chartType, mainAPIresponse);
-    });
-
-    $('#chart-hum').addEventListener('click', () => {
-        $('#chart-dropdown').innerText = "Humidity";
-        chartType = 'humidity';
-        createDailyChart(chartType, mainAPIresponse);
-    });
-
-    $('#chart-cloud').addEventListener('click', () => {
-        $('#chart-dropdown').innerText = "Cloudiness";
-        chartType = 'cloudiness';
-        createDailyChart(chartType, mainAPIresponse);
-    });
 }; //end of window.onload()
 
 
@@ -212,6 +191,7 @@ const updateUI = (lat, lon, unit) => {
     // making API calls with updated parameters
     getForecast5days(lat, lon, unit, handle5daysForecastCallback);
     getCurrDayWeather(lat, lon, unit, handleCurrDayForecastCallback);
+    getAirPollutionForecast(lat, lon, unit, handleAirPolutionForecastCallback)
 };
 
 const handleCurrDayForecastCallback = (err, response) => {
@@ -221,8 +201,16 @@ const handleCurrDayForecastCallback = (err, response) => {
     } else {
         mainAPIresponse = response;
         fillMainWeatherPanel(mainAPIresponse);
-        fillWeeklyWeatherPanel(mainAPIresponse);
-        createDailyChart(chartType, mainAPIresponse);
+    }
+};
+
+const handleAirPolutionForecastCallback = (err, response) => {
+    if (err) {
+        console.log("Error in API call");
+        console.log(err);
+    } else {
+        mainAPIresponse = response;
+        fillAirPollutionPanel(mainAPIresponse);
     }
 };
 
@@ -239,7 +227,8 @@ const handle5daysForecastCallback = (err, response) => {
 
 const getCurrDayWeather = (lat, lon, unit, callback) => {
     const parts = 'minutely,hourly,alerts';
-    const URL = `https://api.openweathermap.org/data/2.5/onecall?units=${unit}&lat=${lat}&lon=${lon}&exclude=${parts}&appid=${ApiKey}`;
+    const URL = `https://api.openweathermap.org/data/2.5/weather?units=${unit}&lat=${lat}&lon=${lon}&appid=${ApiKey}`;
+    console.log(URL);
     ajaxGetRequest(URL, callback);
 };
 
@@ -247,6 +236,11 @@ const getForecast5days = (lat, lon, unit, callback) => {
     const URL = `https://api.openweathermap.org/data/2.5/forecast?&units=${unit}&lat=${lat}&lon=${lon}&appid=${ApiKey}`;
     ajaxGetRequest(URL, callback);
 };
+
+const getAirPollutionForecast = (lat, lon, unit, callback) => {
+    const URL = `https://api.openweathermap.org/data/2.5/air_pollution/forecast?lat=${lat}&lon=${lon}&appid=${ApiKey}`;
+    ajaxGetRequest(URL, callback);
+}
 
 const ajaxGetRequest = (url, callback) => {
     const xhr = new XMLHttpRequest();
@@ -271,22 +265,21 @@ const ajaxGetRequest = (url, callback) => {
 
 // filling data about current weather into front panel shown to user
 const fillMainWeatherPanel = (currWeather) => {
-    $('#temperature').innerHTML = parseInt(currWeather.current.temp) + " " + temp;
-    $('#feels-like').innerHTML = " " + parseInt(currWeather.current.feels_like) + " " + temp;
-    $('#humidity').innerText = " " + currWeather.current.humidity + " %";
-    $('#wind-speed').innerText = " " + currWeather.current.wind_speed + " " + distance + "/s";
-    $('#wind-dir').innerText = " " + getCardinalDirectionAndArrow(currWeather.current.wind_deg);
-    $('#uv-index').innerText = " " + currWeather.current.uvi;
-    $('#clouds').innerText = currWeather.current.clouds + " %";
-    $('#pressure').innerText = " " + (currWeather.current.pressure / 100) + " mb"; //Converting pressure from hpa to mb
-    $('#weather-icon').src = `https://openweathermap.org/img/wn/${currWeather.current.weather[0].icon}@4x.png`;
+    $('#temperature').innerHTML = parseInt(currWeather.main.temp) + " " + temp;
+    $('#feels-like').innerHTML = " " + parseInt(currWeather.main.feels_like) + " " + temp;
+    $('#humidity').innerText = " " + currWeather.main.humidity + " %";
+    $('#wind-speed').innerText = " " + currWeather.wind.speed + " " + distance + "/s";
+    $('#wind-dir').innerText = " " + getCardinalDirectionAndArrow(currWeather.wind.deg);
+    $('#clouds').innerText = currWeather.clouds.all + " %";
+    $('#pressure').innerText = " " + (currWeather.main.pressure / 100) + " mb"; //Converting pressure from hpa to mb
+    $('#weather-icon').src = `https://openweathermap.org/img/wn/${currWeather.weather[0].icon}@4x.png`;
 
     // setting visibility distance
     if (unit == "metric") {
         // visibility is given in meters in API, converting to km
-        $('#visibility').innerText = " " + (parseInt(currWeather.current.visibility) / 1000) + " km";
+        $('#visibility').innerText = " " + (parseInt(currWeather.visibility) / 1000) + " km";
     } else {
-        $('#visibility').innerText = " " + currWeather.current.visibility + " miles";
+        $('#visibility').innerText = " " + currWeather.visibility + " miles";
     }
 };
 
@@ -320,25 +313,63 @@ const fillHourlyBreakdown = (threeHourAPIresponse) => {
     }
 }
 
-const fillWeeklyWeatherPanel = (response) => {
-    // next seven days forecast is giving us records of weather forecast for today AND next 7 days
-    // which is 8 days in total. We want to show weekly forecast for today and next 6 days, therefore
-    // using slice() metod we get rid of an extra day
-    let sevenDaysWeather = response.daily.slice(0, -1);
-    let html = "";
+const fillAirPollutionPanel = (response) => {
+    let groupedData = {};
 
-    for (let day of sevenDaysWeather) {
-        // converting seconds into miliseconds and into Date object
-        let date = new Date(day.dt * 1000);
-        html += `<div class="col"><p>${getNameOfDay(date.getDay())}</p>
-            <p>${date.getDate()}.${date.getMonth() + 1}</p>
-            <p><img src="https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png"></p>
-            <h3>${parseInt(day.temp.max)}${temp} <span class="text-muted">${parseInt(day.temp.min)}${temp}</span></h3>
-            <p>${day.weather[0].description}</p></div>`;
-    }
-    $("#weekly-panel").innerHTML = html;
+    // Group data by date
+    response.list.forEach(entry => {
+        let date = new Date(entry.dt * 1000).toISOString().split('T')[0];
+        if (!groupedData[date]) {
+            groupedData[date] = [];
+        }
+        groupedData[date].push(entry);
+    });
+
+    // Generate Bootstrap row and col layout
+    let output = '<div class="container">';
+
+    Object.keys(groupedData).forEach(date => {
+        let entries = groupedData[date];
+        let avgAqi = entries.reduce((sum, e) => sum + e.main.aqi, 0) / entries.length;
+        let avgPm25 = entries.reduce((sum, e) => sum + e.components.pm2_5, 0) / entries.length;
+        let avgPm10 = entries.reduce((sum, e) => sum + e.components.pm10, 0) / entries.length;
+        let avgNo2 = entries.reduce((sum, e) => sum + e.components.no2, 0) / entries.length;
+        let avgSo2 = entries.reduce((sum, e) => sum + e.components.so2, 0) / entries.length;
+        let avgO3 = entries.reduce((sum, e) => sum + e.components.o3, 0) / entries.length;
+        let aqiColor = getAqiColor(avgAqi);
+
+        output += `
+            <div class="row mb-3">
+                <div class="col-12 bg-light p-3 rounded shadow-sm">
+                    <h4 class="text-center">
+                        ${date} 
+                        <span class="aqi-indicator" style="display: inline-block; width: 15px; height: 15px; border-radius: 50%; background: ${aqiColor}; margin-left: 10px;"></span>
+                    </h4>
+                    <div class="row">
+                        <div class="col-md-2"><strong>Avg AQI:</strong> ${avgAqi.toFixed(1)}</div>
+                        <div class="col-md-2"><strong>PM2.5:</strong> ${avgPm25.toFixed(1)}</div>
+                        <div class="col-md-2"><strong>PM10:</strong> ${avgPm10.toFixed(1)}</div>
+                        <div class="col-md-2"><strong>NO2:</strong> ${avgNo2.toFixed(1)}</div>
+                        <div class="col-md-2"><strong>SO2:</strong> ${avgSo2.toFixed(1)}</div>
+                        <div class="col-md-2"><strong>O3:</strong> ${avgO3.toFixed(1)}</div>
+                    </div>
+                </div>
+            </div>`;
+    });
+    
+    output += '</div>';
+    $("#air-pollution-panel").innerHTML = output;
 };
 
+// Function to determine AQI color
+const getAqiColor = (aqi) => {
+    if (aqi <= 1) return 'green';
+    if (aqi <= 2) return 'yellow';
+    if (aqi <= 3) return 'orange';
+    if (aqi <= 4) return 'red';
+    if (aqi <= 5) return 'purple';
+    return 'brown';
+}
 
 
 // set days of the tabs corresponding to API response data available
